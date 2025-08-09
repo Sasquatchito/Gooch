@@ -1,0 +1,28 @@
+
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+ 
+set(INCLUDES
+    ${GOOCH_ROOT}/includes/MathFunctions/MathFunctions.h
+)
+
+set(SOURCES
+    MathFunctions.cpp
+    main.cpp
+)
+
+
+add_executable(MathFunctions 
+    ${INCLUDES}
+    ${SOURCES}           
+)
+
+target_include_directories(MathFunctions PUBLIC 
+    ${GOOCH_ROOT}/includes/
+    ${GOOCH_ROOT}/includes/MathFunctions/
+)
+
